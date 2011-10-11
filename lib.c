@@ -20,16 +20,6 @@ void usage(char *app_name) {
 	exit(8);
 }
 
-long lenght_of_word(long l) {
-	long tmp = 10; short i;
-
-	for(i=1; i<l; i++) {
-		tmp *= 10;
-	}
-
-	return tmp;
-}
-
 void type_to_name(char *type) {
 	switch(type[0]) {
 		case 'l':
@@ -43,7 +33,6 @@ void type_to_name(char *type) {
 
 void generate(long n, long l, char *out, char *type, char sep) {
 	FILE *f;
-	long dl = lenght_of_word(l);
 
 	file_open(out, &f);
 
@@ -53,7 +42,7 @@ void generate(long n, long l, char *out, char *type, char sep) {
 	fprintf(stderr, "Generowanie w toku\n");
 
 	if(!strcmp(type, "LONG")) {
-		generate_long(n, dl, &f, sep);
+		generate_long(n, l, &f, sep);
 	} else {
 		if(!strcmp(type, "CHAR")) {
 			generate_char(n, l, &f, sep);
@@ -84,8 +73,11 @@ void generate_long(long n, long l, FILE **f, char sep) {
 	long tmp, i;
 
 	while(n--) {
-		tmp = rand() % l;
-		fprintf(*f, "%ld%c", tmp, sep);
+		for(i=0; i<rand()%l+1; i++) {
+			tmp = rand() % 10;
+			fprintf(*f, "%ld", tmp);
+		}
+		fprintf(*f, "%c", sep);
 		printf("\rPozostalo: %ld", n);
 	}
 }

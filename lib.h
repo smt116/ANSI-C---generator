@@ -13,7 +13,6 @@
 
 /* funkcje obslugujace argumenty */
 	void usage(char *);
-	long lenght_of_word(long);
 	void type_to_name(char *);
 
 /* funkcje generujace */
