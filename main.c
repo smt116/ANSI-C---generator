@@ -48,6 +48,8 @@ int main(int argc, char *argv[]) {
 		fprintf(stderr, "SEPARATOR:\t%c\n", SEPARATOR);
 
 		generate(N, L, OUT, TYPE, SEPARATOR);
+
+		fprintf(stderr, "\n");
 	}
 	return 0;
 }
