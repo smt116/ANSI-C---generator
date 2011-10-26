@@ -60,7 +60,7 @@ void generate_char(long n, long l, FILE **f, char sep) {
 	long i;
 
 	while(n--) {
-		for(i=0; i<rand()%l; i++) {
+		for(i=0; i<rand()%l+1; i++) {
 			tmp = (char)(rand() % 25 + 97);
 			fprintf(*f, "%c", tmp);
 		}
