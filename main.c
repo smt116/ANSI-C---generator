@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
 
 		generate(N, L, OUT, TYPE, SEPARATOR);
 
-		fprintf(stderr, "\n");
+		printf("\n\n");
 	}
 	return 0;
 }
