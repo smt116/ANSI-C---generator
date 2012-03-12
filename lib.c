@@ -16,8 +16,7 @@ void usage(char *app_name) {
 	fprintf(stderr, "\t\tl\t# for LONG\n");
 	fprintf(stderr, "\nEXAMPLE:\n ./main -c100 -l10 -tl -ooutput.txt -s:\n");
 	fprintf(stderr, "\nStandards output:\n");
-	fprintf(stderr, "-c10000 -l8 -tl -odate.in -s{new line}\n");
-	exit(8);
+	fprintf(stderr, "-c10000 -l8 -tl -odate.in -s{new line}\n\n");
 }
 
 void type_to_name(char *type) {

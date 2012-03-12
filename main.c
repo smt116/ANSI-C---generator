@@ -5,7 +5,8 @@
 #include "lib.h"
 
 int main(int argc, char *argv[]) {
-	long N = 10000, L = 8;
+	long 	N = 10000, 
+			L = 8;
 	char OUT[128] = "date.in";
 	char TYPE[16] = "LONG";
 	char SEPARATOR = '\n';
@@ -46,10 +47,10 @@ int main(int argc, char *argv[]) {
 		fprintf(stderr, "TYP SLOWA:\t%s\n", TYPE);
 		fprintf(stderr, "PLIK WYJSCIOWY:\t%s\n", OUT);
 		fprintf(stderr, "SEPARATOR:\t%c\n", SEPARATOR);
-
-		generate(N, L, OUT, TYPE, SEPARATOR);
-
-		printf("\n\n");
 	}
+
+	generate(N, L, OUT, TYPE, SEPARATOR);
+	printf("\n\n");
+
 	return 0;
 }

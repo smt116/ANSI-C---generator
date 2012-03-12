@@ -1,12 +1,11 @@
 FLAGS = -Wall
-STD = -std=c99
 
 MAIN = main
 LIB = lib
 NAME = generator
 
 default: obj
-	$(CC) $(STD) $(MAIN).o $(LIB).o -o $(NAME)
+	$(CC) $(FLAGS) $(MAIN).o $(LIB).o -o $(NAME)
 
 obj:
 	$(CC) $(STD) *.c -c
